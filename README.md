@@ -54,3 +54,10 @@ claude/skills/     Personal skills (copied to ~/.claude/skills)
 ```
 
 Safe to re-run: every step is idempotent.
+
+## Notes / known quirks
+
+- **tokless binary locked:** if tokless is already installed, its binary may be locked by a running agent process, so the installer skips the download. Upgrade with `tokless update` after closing agent sessions.
+- **Step order matters:** ECC and impeccable installs can overwrite agent MCP config, so tokless wiring runs last. If `tokless doctor` ever reports missing tools after another install, re-run `tokless --agents claude,opencode,codex,antigravity`.
+- **`ecc doctor` warnings:** "drifted managed files" warnings are expected — tokless and impeccable touch ECC-managed configs. Not an error; the installer treats them as non-fatal.
+- **Project-local artifacts:** impeccable installs into the current directory too; `.gitignore` keeps those (`.claude/`, `.codegraph/`, etc.) out of the repo.
