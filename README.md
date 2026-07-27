@@ -1,4 +1,4 @@
-# agent-setup
+﻿# agent-setup
 
 My AI coding-agent toolkit. One script reproduces the full setup on any computer, for Claude Code, Codex, OpenCode, and Antigravity.
 
@@ -6,7 +6,7 @@ My AI coding-agent toolkit. One script reproduces the full setup on any computer
 
 | Layer | Tool | What it does |
 |---|---|---|
-| [tokless](https://github.com/HoangP8/tokless) | caveman | Terse output — ~65% fewer tokens |
+| [tokless](https://github.com/HoangP8/tokless) | caveman | Terse output â€” ~65% fewer tokens |
 | | ponytail | Lazy-senior-dev minimalism, no over-engineering |
 | | rtk | Compresses command output before it hits the LLM |
 | | codegraph | Pre-indexed code knowledge graph (MCP) |
@@ -22,14 +22,14 @@ Prereqs: Node.js + npm. Agents you use (Claude Code, Codex, OpenCode) installed 
 
 **Windows (PowerShell):**
 ```powershell
-git clone https://github.com/YOURUSER/agent-setup
+git clone https://github.com/iamtyroon/agent-setup
 cd agent-setup
 .\install.ps1
 ```
 
 **macOS / Linux:**
 ```bash
-git clone https://github.com/YOURUSER/agent-setup
+git clone https://github.com/iamtyroon/agent-setup
 cd agent-setup
 ./install.sh
 ```
