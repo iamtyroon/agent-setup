@@ -6,7 +6,7 @@ My AI coding-agent toolkit. One script reproduces the full setup on any computer
 
 | Layer | Tool | What it does |
 |---|---|---|
-| [tokless](https://github.com/HoangP8/tokless) | caveman | Terse output â€” ~65% fewer tokens |
+| [tokless](https://github.com/HoangP8/tokless) | caveman | Terse output - ~65% fewer tokens |
 | | ponytail | Lazy-senior-dev minimalism, no over-engineering |
 | | rtk | Compresses command output before it hits the LLM |
 | | codegraph | Pre-indexed code knowledge graph (MCP) |
