@@ -13,6 +13,7 @@ My AI coding-agent toolkit. One script reproduces the full setup on any computer
 | | context-mode | Sandboxed tool output + session memory (MCP) |
 | [ECC](https://github.com/affaan-m/ECC) | minimal + core profiles | Skills, rules, agents, commands (/plan, /code-review, /learn, ...) |
 | [impeccable](https://github.com/pbakaus/impeccable) | design skill | 23 design commands + detector rules |
+| Codex | `codex/skills/` | Impeccable, Unslop, I Have ADHD, Grill Me, Roblox, Unity, TouchDesigner, static malware analysis, and 3D web-game skills |
 | Personal | `claude/skills/` | 12 design skills (brandkit, gpt-taste, minimalist-ui, ...) |
 | Personal | `claude/CLAUDE.md` | Global instructions for all projects |
 
@@ -49,9 +50,21 @@ git pull && ./install.sh   # or .\install.ps1
 ```
 install.ps1        Windows installer
 install.sh         macOS/Linux installer
+codex/skills/      Vendored Codex skills copied to the global Codex skill path
+codex/references/  Shared references for the vendored OpenAI game-studio slice
 claude/CLAUDE.md   Global Claude instructions
 claude/skills/     Personal skills (copied to ~/.claude/skills)
 ```
+
+Codex skill details and source links live in [`codex/README.md`](codex/README.md).
+
+`ponytail` is already bundled and wired by `tokless`; it is intentionally not
+vendored a second time here. The installer runs tokless wiring for Codex.
+
+In Codex, `$i-have-adhd` and `$grill-me` are explicit opt-in skills. `ponytail`
+stays active through the global tokless instructions. `unslop` and
+`$impeccable` activate when the task matches their descriptions or when you
+invoke them directly.
 
 Safe to re-run: every step is idempotent.
 
