@@ -1,4 +1,25 @@
-# Codex skills
+# Codex support
+
+Portable Codex support has three layers:
+
+- `.codex/config.toml` — project-local sandbox, web, multi-agent, and MCP baseline.
+- `.codex/agents/` — explorer, reviewer, and documentation-researcher role layers.
+- `codex/skills/` and `codex/references/` — vendored skills and supporting references.
+
+OpenCode consumes the same vendored skills through `opencode.json` and
+`scripts/sync-opencode.mjs`. The sync flattens nested Codex skill bundles into
+OpenCode's user-wide skill directory and converts Codex TOML role layers into
+OpenCode Markdown subagents. OpenCode project agents live in
+`.opencode/agents/`.
+
+The installer copies skills and missing role files into `$CODEX_HOME`, then runs
+`scripts/sync-codex-config.mjs`. Sync is add-only: existing config sections,
+credentials, global `AGENTS.md`, and custom agent roles remain untouched.
+
+`codex/AGENTS.md` is copied as global guidance only when no user global
+`AGENTS.md` exists. The repo root `AGENTS.md` remains the project-specific guide.
+
+## Vendored skills
 
 These skill folders are vendored so a new computer gets the same Codex surface
 without relying on a live marketplace install.

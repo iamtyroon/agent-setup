@@ -3,5 +3,10 @@
 .agents/
 .cursor/
 .gemini/
-.opencode/
+.opencode/*
+!.opencode/
+!.opencode/agents/
+!.opencode/agents/*.md
+!.opencode/plugins/
+!.opencode/plugins/*.ts
 nul
