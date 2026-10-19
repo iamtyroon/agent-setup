@@ -28,7 +28,8 @@ without relying on a live marketplace install.
 | --- | --- | --- |
 | `impeccable` | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | Frontend design, responsive UX, accessibility, motion, and visual QA |
 | `unslop` | [theclaymethod/unslop](https://github.com/theclaymethod/unslop) | Audit or rewrite AI-sounding prose; preserves facts and structure |
-| `i-have-adhd` | [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd) | Explicit action-first output mode via `$i-have-adhd` |
+| `caveman` | Local | Automatic concise, direct, technically exact response style |
+| `i-have-adhd` | [ayghri/i-have-adhd](https://github.com/ayghri/i-have-adhd) | Automatic action-first, low-friction output shaping |
 | `grill-me` + `grilling` | [mattpocock/skills](https://github.com/mattpocock/skills) | Explicit plan/design interview via `$grill-me`; `grill-me` routes to `grilling` |
 | `roblox-brain` | [TabooHarmony/roblox-brain](https://github.com/TabooHarmony/roblox-brain) | 28 focused Roblox/Luau/Studio skills: architecture, networking, UI, data, performance, security, tooling, and publishing |
 | `unity-agent-workflows` | [AUN-PN/unity-agent-workflows](https://github.com/AUN-PN/unity-agent-workflows) | Unity project discovery, runtime-owner proof, visible-output validation, UI/scene/asset gates, and cleanup |

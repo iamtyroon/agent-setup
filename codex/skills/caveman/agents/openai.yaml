@@ -1,0 +1,7 @@
+interface:
+  display_name: "Caveman"
+  short_description: "Concise, direct, technically exact responses"
+  default_prompt: "Apply concise, direct, technically exact communication automatically."
+
+policy:
+  allow_implicit_invocation: true
