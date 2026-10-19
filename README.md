@@ -13,9 +13,11 @@ My AI coding-agent toolkit. One script reproduces the full setup on any computer
 | | context-mode | Sandboxed tool output + session memory (MCP) |
 | [ECC](https://github.com/affaan-m/ECC) | minimal + core profiles | Skills, rules, agents, commands (/plan, /code-review, /learn, ...) |
 | [impeccable](https://github.com/pbakaus/impeccable) | design skill | 23 design commands + detector rules |
+| [karpathy-guidelines](https://github.com/forrestchang/andrej-karpathy-skills) | vendored | Always-on coding discipline: think first, simplify, surgical edits, verifiable goals |
+| [ponytail](https://github.com/dietrichgebert/ponytail) | vendored | Always-on lazy-senior-dev minimalism, plus 5 one-shot report commands |
 | Codex | `.codex/` + `codex/` | Portable config, multi-agent roles, MCP baseline, and vendored skills |
 | OpenCode | `opencode.json` + `.opencode/` | Project MCP baseline, agents, rtk plugin, and Codex-skill sync |
-| Personal | `claude/skills/` | 12 design skills (brandkit, gpt-taste, minimalist-ui, ...) |
+| Personal | `claude/skills/` | 12 design skills (brandkit, gpt-taste, minimalist-ui, ...) + always-on skills |
 | Personal | `claude/CLAUDE.md` | Global instructions for all projects |
 
 ## Install (new computer)
@@ -68,13 +70,20 @@ claude/skills/     Personal skills (copied to ~/.claude/skills)
 Codex and OpenCode config, agent roles, skill details, and source links live in
 [`codex/README.md`](codex/README.md) and [`opencode/README.md`](opencode/README.md).
 
-`ponytail` is already bundled and wired by `tokless`; it is intentionally not
-vendored a second time here. The installer runs tokless wiring for Codex.
+`ponytail` and `karpathy-guidelines` are vendored under both `codex/skills/` and
+`claude/skills/`, so one install reaches Codex, OpenCode, and Claude Code. The
+installer runs tokless wiring for Codex.
 
-In Codex, `$i-have-adhd` and `$grill-me` are explicit opt-in skills. `ponytail`
-stays active through the global tokless instructions. `unslop` and
-`$impeccable` activate when the task matches their descriptions or when you
-invoke them directly.
+In Codex, `caveman` and `i-have-adhd` are automatic defaults. Their short rules
+also live in `AGENTS.md`, so behavior does not depend on a skill command.
+`karpathy-guidelines` and `ponytail` are always-on: load both at the start of any
+coding task. `karpathy-guidelines` decides scope, `ponytail` decides size; on
+conflict take the smaller diff. Relevant skills autoload from their descriptions.
+`grill-me`, `user-context`, `share`, and `yeet` remain explicit-only because they
+are intrusive or change state. `ponytail-audit`, `ponytail-debt`, `ponytail-gain`,
+`ponytail-help`, and `ponytail-review` are one-shot reports, not edits, so they stay
+explicit-only too. `unslop` and `impeccable` activate when the task matches their
+descriptions or when you invoke them directly.
 
 Safe to re-run: every step is idempotent.
 

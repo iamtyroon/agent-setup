@@ -10,3 +10,8 @@
 !.opencode/plugins/
 !.opencode/plugins/*.ts
 nul
+
+# Scratch output and personal drafts - not part of the portable setup
+.gprm-tmp/
+profile-README-draft.md
+*-vuln-report.md

@@ -8,6 +8,23 @@ Apply on every coding task:
 - **Code Index (codegraph)** — one call for structure, flows, dependencies.
 - **Context Tools (context-mode)** — keep raw bytes out, derive answers in-sandbox.
 
+## Always-on skills
+
+Load these at the start of any coding task, without being asked:
+
+- **`karpathy-guidelines`** — whether to change: surface assumptions, simplicity, surgical edits, verifiable goals.
+- **`ponytail`** — how little to change: the smallest diff that fully solves the task.
+
+They do not conflict. `karpathy-guidelines` decides scope, `ponytail` decides size.
+On conflict, take the smaller diff.
+
+The **Principles** section below restates `karpathy-guidelines` in prose so the
+behaviour survives even if the skill is not loaded. Apply them once — do not
+restate them back to the user or add a fifth near-identical rule.
+
+Leave `ponytail-audit`, `ponytail-debt`, `ponytail-gain`, `ponytail-help`, and
+`ponytail-review` explicit-only. They are one-shot reports, not edits.
+
 
 ## Principles
 
